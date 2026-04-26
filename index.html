@@ -158,7 +158,8 @@ nav {
 footer { background:var(--navy-dark); border-top:3px solid var(--gold); max-width:860px; margin:0 auto; padding:18px 36px; text-align:center; }
 footer .contact { color:white; font-size:13px; font-weight:600; margin-bottom:4px; }
 footer .tagline { color:var(--sky); font-size:11px; }
-footer .brokerage { color:rgba(180,200,230,.5); font-size:10px; margin-top:10px; text-decoration:underline; cursor:pointer; }
+footer .brokerage { color:rgba(180,200,230,.5); font-size:10px; margin-top:10px; text-decoration:underline; cursor:pointer; display:inline-block; }
+footer .brokerage:hover { color:var(--sky); }
 
 /* MODAL */
 .modal-overlay {
@@ -385,7 +386,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   <footer>
     <div class="contact">832-558-2911 &nbsp;|&nbsp; www.newerapm.com</div>
     <div class="tagline">Newera Property Management &nbsp;|&nbsp; Professional Property Services</div>
-    <div class="brokerage">Information about Brokerage Services</div>
+    <a class="brokerage" href="https://drive.google.com/file/d/1fLGgoN2XYHwquTLB5oHZ_oZzHAobEFWy/view?usp=sharing" target="_blank" rel="noopener">Information about Brokerage Services</a>
   </footer>
 
 </div>
