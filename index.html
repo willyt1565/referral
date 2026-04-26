@@ -49,7 +49,7 @@ nav {
 .hero-sky-bar { height:6px; background:var(--sky); }
 .hero-header {
   background:var(--navy); padding:44px 52px 40px;
-  display:grid; grid-template-columns:auto 1fr auto;
+  display:grid; grid-template-columns:auto 1fr;
   gap:28px; align-items:center; position:relative; overflow:hidden;
 }
 .hero-header::before {
@@ -280,10 +280,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         <h1 class="hero-title">Earn More for<br>Every Door You Refer</h1>
         <p class="hero-sub"><b>$150 per client</b> &nbsp;+&nbsp; <b>$10 per door</b> &nbsp;|&nbsp; Paid upon signed agreement</p>
       </div>
-      <div class="hero-badge">
-        <span class="amt">$150</span>
-        <span class="amt-label">per client</span>
-        <span class="plus-d">+ $10 per door</span>
+    </div>
+    <div style="background:var(--navy-dark);display:flex;justify-content:center;align-items:center;gap:40px;padding:16px 0;">
+      <div style="text-align:center;">
+        <span style="display:block;font-size:30px;font-weight:800;color:var(--gold);line-height:1;font-family:'Poppins',sans-serif;">$150</span>
+        <span style="display:block;font-size:11px;color:rgba(255,255,255,.65);margin-top:3px;font-family:'Poppins',sans-serif;">per client</span>
+      </div>
+      <div style="font-size:24px;color:rgba(200,168,75,.6);font-weight:300;font-family:'Poppins',sans-serif;">+</div>
+      <div style="text-align:center;">
+        <span style="display:block;font-size:30px;font-weight:800;color:var(--sky);line-height:1;font-family:'Poppins',sans-serif;">$10</span>
+        <span style="display:block;font-size:11px;color:rgba(255,255,255,.65);margin-top:3px;font-family:'Poppins',sans-serif;">per door owned</span>
+      </div>
+      <div style="width:1px;height:36px;background:rgba(200,168,75,.25);"></div>
+      <div style="text-align:center;">
+        <span style="display:block;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-family:'Poppins',sans-serif;">Paid upon</span>
+        <span style="display:block;font-size:11px;color:rgba(255,255,255,.55);font-family:'Poppins',sans-serif;">signed agreement</span>
       </div>
     </div>
     <div class="stripe-bar"></div>
@@ -432,7 +443,7 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
 document.getElementById('refDoors').addEventListener('input',function(){
   const d=parseInt(this.value)||0;
   const t=150+(d*10);
-  document.getElementById('feePreview').textContent = d>0 ? '$'+t+' total ('+d+' door'+(d!==1?'s':')+')' : '$150 + $10/door';
+  document.getElementById('feePreview').textContent = d>0 ? '$'+t+' total ('+d+' door'+(d!==1?'s':'')+')'  : '$150 + $10/door';
 });
 
 // ─────────────────────────────────────────────────────────────────────
